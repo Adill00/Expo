@@ -6,8 +6,8 @@ const City = () => {
     return (
         <SafeAreaView style={styles.container}>
             <ImageBackground source={require('../../assets/city-background.jpg')} style={styles.imageLayout}>
-                <Text style={styles.cityName}>London</Text>
-                <Text style={styles.countryName}>UK</Text>
+                <Text style={[styles.cityName , styles.cityText]}>London</Text>
+                <Text style={[styles.countryName , styles.cityText]}>UK</Text>
             </ImageBackground>
         </SafeAreaView>
     )
@@ -23,16 +23,14 @@ const styles = StyleSheet.create({
         flex:1
     },
     cityName:{
-        justifyContent:'center',
-        alignSelf:'center',
-        fontSize:40,
-        fontWeight:'bold',
-        color:'white'
+        fontSize:40
     },
     countryName:{
+        fontSize:30
+    },
+    cityText:{
         justifyContent:'center',
         alignSelf:'center',
-        fontSize:30,
         fontWeight:'bold',
         color:'white'
     }
